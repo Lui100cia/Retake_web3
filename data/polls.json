@@ -1,0 +1,60 @@
+{
+  "polls": [
+    {
+      "id": "3f1c2a9e-7b64-4d1a-9c23-8e0f5a61d7b2",
+      "question": "Quel framework pour le prochain projet ?",
+      "createdAt": "2026-09-15T08:00:00.000Z",
+      "choices": [
+        {
+          "id": "c1a7f4d2-5e38-4b90-8a61-2c7d9f0e3b45",
+          "label": "Next.js",
+          "votes": 3
+        },
+        {
+          "id": "9b02e5c8-1d47-4a36-b820-6f3c8d95e714",
+          "label": "Remix",
+          "votes": 1
+        },
+        {
+          "id": "e4d5b719-8c62-4f05-9a3d-7b1e0c246f88",
+          "label": "Astro",
+          "votes": 0
+        }
+      ]
+    },
+    {
+      "id": "a7e93c15-2f80-4b6d-9e14-5c08d3a7f621",
+      "question": "Pizza ou sushi vendredi ?",
+      "createdAt": "2026-09-14T17:30:00.000Z",
+      "choices": [
+        {
+          "id": "5d3f8b02-9a17-4c6e-b045-1e7902c8d356",
+          "label": "Pizza",
+          "votes": 4
+        },
+        {
+          "id": "b81c604a-3e29-4d75-8f16-0a5b7c93e2d0",
+          "label": "Sushi",
+          "votes": 2
+        }
+      ]
+    },
+    {
+      "id": "c0d44a36-5550-41a5-9b73-1d297b3cbd81",
+      "question": "Comment devenir riche",
+      "createdAt": "2026-09-15T16:01:33.383Z",
+      "choices": [
+        {
+          "id": "2094b4c1-4d67-413a-80be-73318ca9f12d",
+          "label": "Travailler",
+          "votes": 0
+        },
+        {
+          "id": "60ce5845-4b65-4eb4-9415-2a051669b4c8",
+          "label": "Voler",
+          "votes": 1
+        }
+      ]
+    }
+  ]
+}
