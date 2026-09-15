@@ -8,11 +8,7 @@ import {
   QUESTION_MAX_LENGTH,
 } from "@/lib/validation";
 
-/**
- * Formulaire de création. Client car il gère l'ajout/retrait dynamique des
- * champs de choix et l'affichage du message d'erreur renvoyé par l'action.
- * Les champs sont contrôlés : une erreur serveur ne perd aucune saisie.
- */
+
 export default function NewPollForm() {
   const [question, setQuestion] = useState("");
   const [choices, setChoices] = useState(["", ""]);
