@@ -8,11 +8,7 @@ type Props = {
   question: string;
 };
 
-/**
- * Bouton « Supprimer » de la liste. Demande une confirmation avant d'appeler
- * l'action (RG-09). Client car il a besoin de window.confirm et d'afficher
- * l'erreur éventuelle.
- */
+
 export default function DeletePollButton({ pollId, question }: Props) {
   const [error, setError] = useState<string | null>(null);
   const [isPending, startTransition] = useTransition();
