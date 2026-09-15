@@ -12,7 +12,7 @@ export default function NewPollPage() {
       <NewPollForm />
       <p className="mt-8 text-sm">
         <Link href="/" className="underline">
-          ← Retour à la liste
+           Retour à la liste
         </Link>
       </p>
     </section>
