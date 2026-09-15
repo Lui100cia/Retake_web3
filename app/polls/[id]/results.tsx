@@ -1,10 +1,6 @@
 import type { Poll } from "@/lib/types";
 import { totalVotes } from "@/lib/polls";
 
-/**
- * Composant serveur : les pourcentages sont calculés ici, jamais côté client
- * (RG-06). Un sondage sans vote affiche 0 % partout.
- */
 export default function Results({ poll }: { poll: Poll }) {
   const total = totalVotes(poll);
 
