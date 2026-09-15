@@ -11,7 +11,6 @@ export default async function PollPage({ params }: PageProps<"/polls/[id]">) {
   const { id } = await params;
   const poll = await getPoll(id);
 
-  // Une URL vers un sondage inconnu affiche la page 404 dédiée.
   if (!poll) {
     notFound();
   }
