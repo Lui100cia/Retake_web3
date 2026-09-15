@@ -8,16 +8,10 @@ import type { Choice, Poll } from "./types";
 import { validateChoices, validateQuestion } from "./validation";
 import { hasVoted, markVoted } from "./voted";
 
-/**
- * Résultat renvoyé aux formulaires. Une erreur de validation n'est jamais une
- * exception non gérée (RG-08) : elle revient sous forme de message.
- */
+
 export type ActionResult = { error: string } | null;
 
-/**
- * RG-07 — création d'un sondage. Toutes les règles sont revérifiées ici,
- * même si l'interface les empêche déjà.
- */
+
 export async function createPoll(formData: FormData): Promise<ActionResult> {
   const rawQuestion = formData.get("question");
   const rawChoices = formData.getAll("choice");
@@ -55,11 +49,7 @@ export async function createPoll(formData: FormData): Promise<ActionResult> {
   redirect(`/polls/${poll.id}`);
 }
 
-/**
- * RG-03, RG-04, RG-05 — le client n'envoie que deux identifiants ; le serveur
- * vérifie l'appartenance du choix, incrémente lui-même le compteur et pose le
- * cookie.
- */
+
 export async function vote(pollId: string, choiceId: string): Promise<ActionResult> {
   if (typeof pollId !== "string" || typeof choiceId !== "string") {
     return { error: "Vote invalide." };
@@ -90,7 +80,6 @@ export async function vote(pollId: string, choiceId: string): Promise<ActionResu
   return null;
 }
 
-/** RG-09 — supprime le sondage et tous ses votes. Toujours autorisée. */
 export async function deletePoll(pollId: string): Promise<ActionResult> {
   if (typeof pollId !== "string") {
     return { error: "Suppression invalide." };

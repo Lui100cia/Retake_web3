@@ -9,11 +9,7 @@ type Props = {
   choices: Choice[];
 };
 
-/**
- * Formulaire de vote. Client pour garder le choix sélectionné et afficher
- * l'erreur renvoyée par l'action. Il n'envoie que deux identifiants : le
- * compteur est incrémenté côté serveur (RG-04).
- */
+
 export default function VoteForm({ pollId, choices }: Props) {
   const [selected, setSelected] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);

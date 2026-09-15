@@ -5,7 +5,6 @@ export const CHOICES_MAX = 5;
 
 export type ValidationError = string;
 
-/** RG-01 — question entre 5 et 120 caractères une fois les espaces retirés. */
 export function validateQuestion(raw: unknown): ValidationError | null {
   if (typeof raw !== "string") {
     return "La question est obligatoire.";
@@ -19,10 +18,6 @@ export function validateQuestion(raw: unknown): ValidationError | null {
   return null;
 }
 
-/**
- * RG-02 — entre 2 et 5 choix, chacun non vide une fois les espaces retirés,
- * et sans doublon de libellé (comparaison insensible à la casse).
- */
 export function validateChoices(raw: unknown[]): ValidationError | null {
   if (raw.length < CHOICES_MIN || raw.length > CHOICES_MAX) {
     return `Un sondage doit avoir entre ${CHOICES_MIN} et ${CHOICES_MAX} choix.`;
